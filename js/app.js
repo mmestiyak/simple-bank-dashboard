@@ -47,7 +47,7 @@ function withdrawFormHandler(e){
   let withdraw = e.currentTarget.withdraw.value;
   if(NumberRegex.test(withdraw)){
     withdraw = Number(withdraw);
-    if(totalWithdraw > totalBalance){
+    if(withdraw < totalBalance && totalWithdraw < totalBalance){
       totalWithdraw+= withdraw;
     }
     totalBalance-= totalWithdraw;
