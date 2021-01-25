@@ -47,11 +47,9 @@ function withdrawFormHandler(e){
   let withdraw = e.currentTarget.withdraw.value;
   if(NumberRegex.test(withdraw)){
     withdraw = Number(withdraw);
-    if(totalWithdraw >= totalBalance){
-      alert('your balance is 0')
-      return
+    if(totalWithdraw > totalBalance){
+      totalWithdraw+= withdraw;
     }
-    totalWithdraw+= withdraw;
     totalBalance-= totalWithdraw;
     balanceShow.dispatchEvent(new CustomEvent('balanceUpdated'));
     withdrawShow.innerText = totalWithdraw;
