@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard</title>
+    <!-- link to google fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@500;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- link to bootstrap css -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css"
+    />
+    <!-- link to custom css -->
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="./js/app.js" defer></script>
+  </head>
+  <body>
+    <div class="container">
+        <div class="login">
+        <div class="row login__box d-flex justify-content-center align-items-center">
+          <div class="col-md-6">
+            <h1 class="text-center py-5 primary-color">
+              Welcome to your bank
+            </h1>
+            <form>
+              <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label"
+                  >Email address</label
+                >
+                <input
+                  type="email"
+                  class="form-control"
+                  id="exampleInputEmail1"
+                  aria-describedby="emailHelp"
+                />
+       
+              </div>
+              <div class="mb-3">
+                <label for="exampleInputPassword1" class="form-label"
+                  >Password</label
+                >
+                <input
+                  type="password"
+                  class="form-control"
+                  id="exampleInputPassword1"
+                />
+              </div>
+              <button name="login" type="submit" class="btn btn-primary">Login</button>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="dashboard">
+        <div class="row d-flex justify-content-between text-white my-5 p-5">
+          <div class="col-12 col-md-3 deposit rounded p-3">
+              <h2 class="mb-3">Deposit</h2>
+              <h1>$ <span class="deposit-show"></span> </h1>
+          </div>
+          <div class="col-12 col-md-3 withdraw rounded p-3">
+            <h2 class="mb-3">Withdraw</h2>
+            <h1>$ <span class="withdraw-show"></span></h1>
+        </div>
+        <div class="col-12 col-md-3 balance rounded p-3">
+          <h2 class="mb-3">Balance</h2>
+          <h1>$ <span class="balance-show"></span></h1>
+      </div>
+        </div>
+        <div class="row d-flex justify-content-around my-5">
+          <div class="col-12 col-md-5  rounded shadow-black p-3">
+            <h3 class="py-2 text-primary">Deposit</h3>
+            <form autocomplete="off" class="form-deposit">
+              <input  name="deposit" type="text" placeholder="$ amount you want to deposit" class="form-control mb-3 text-primary p-2">
+              <input type="submit" value="Deposit" class="btn btn-primary  ">
+            </form>
+          </div>
+          <div class="col-12 col-md-5 shadow-black rounded p-3">
+            <h3 class="py-2 text-danger">Withdraw</h3>
+            <form class="form-withdraw" autocomplete="off">
+              <input name="withdraw" type="text" placeholder="$ amount you want to withdraw" class="form-control mb-3 p-2 text-danger">
+              <input type="submit" value="Withdraw" class="btn btn-danger">
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

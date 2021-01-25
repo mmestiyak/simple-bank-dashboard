@@ -1,0 +1,39 @@
+body {
+  font-family: 'Comfortaa', cursive;
+}
+
+.primary-color {
+  color: #0af;
+}
+
+/* login section */
+
+.login__box {
+  height: 80vh;
+}
+
+
+
+.dashboard {
+  display: none;
+}
+
+.deposit {
+  background: slateblue;
+}
+.withdraw {
+  background: lightsalmon;
+}
+.balance {
+  background: orange;
+}
+
+.shadow-black{
+  box-shadow: 5px 5px 10px rgba(0,0,0,0.5);
+
+}
+
+input[name="withdraw"]:focus{
+  box-shadow:0 0 0 0.25rem #dc35458f;
+}
+
